@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {{>headers}}
+    <style>
+        .header{
+            display: flex;
+            flex-direction: row;
+            flex-wrap:nowrap;
+            gap: 21px ;
+        }
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            /* width: 100vw; */
+        }
+
+        #navbar{
+            height: 10vh;
+            width: 100vw;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            /* padding: 0 5vw; */
+            background-color: #355E3B;
+            padding: 2vh 4vw;
+            color: #F7E733;
+        }
+            .links{
+                display: flex;
+                gap: 1vw;
+            }
+        #section1{
+            height: 50vh;
+            width: 100vw;
+
+            background-image: url("https://thumbs.dreamstime.com/b/potato-plantations-grow-field-vegetable-rows-farming-agriculture-landscape-agricultural-land-crops-potato-plantations-123313972.jpg");
+            /* translate: (-50px,-50px); */
+
+
+            background-size: contain;
+        
+        }
+
+        #section2{
+            display :flex;
+            justify-content: space-around;
+            width:100%;
+            align-items: center;
+
+            /* padding:0 10px; */
+        }
+        
+        img{
+            width: 40%;
+        }
+
+        #tagline{
+            color: white;
+            text-align: center;
+            padding: 30vh 0 0 0;
+            font-size: 56px;
+        }
+
+        h1{
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        button{
+            background-color: #F7E733;
+            color: #355E3B;
+            border: none;
+            height: 4vh;
+            width: 5vw;
+            border-radius: 5px;
+        }
+
+        .buttons:active{
+            height: 2vh;
+        }
+
+        #logo{
+            display: flex;
+            align-items: center;
+            /* justify-content: space-around; */
+            gap: 2vw;
+            /* width: 40%; */
+        }
+        
+
+        a{
+            text-decoration: none;
+        }
+        
+
+        
+        .btns{
+            /* background: #000; */
+            color: #355E3B;
+            font-weight: bold;
+        }
+        #logo>div>a{
+            color: #F7E733;
+        }
+
+        #nav{
+            font-family: 'Raleway', sans-serif;
+            /* float: right; */
+            /* margin: 0 4vw; */
+        }
+        .btns:hover{
+            color: black;
+        }
+
+        .gallery {
+            background: #EEE;
+        }
+
+        .gallery-cell {
+            width: 66%;
+            height: 200px;
+            margin-right: 10px;
+            background: #8C8;
+            counter-increment: gallery-cell;
+        }
+
+        /* cell number */
+        .gallery-cell:before {
+            display: block;
+            text-align: center;
+            content: counter(gallery-cell);
+            line-height: 200px;
+            font-size: 80px;
+            color: white;
+        }
+        .btn2{
+            color: white;
+            font-size: 21px;
+        }
+
+    </style>
+</head>
+<body>
+<div id="navbar">
+
+        <span id = "logo">
+            <h1 style="display:inline">Krishi</h1>
+            <div class="links">
+                <a  href=""> Soil Test </a>
+                <a href=""> Rent Farming Equipment </a>
+            </div>
+        </span>
+
+        <div class="links">
+           
+            <a class="btn2" href="/farmers/addeqp" role="button">Rent A Machine</a>
+            <a class="btn2" href="/farmers/soiltest" role="button">Soil Test</a>
+        </div>
+    </div>
+    
+
+    
+<br><br>
+    {{#each equipments as |data|}}
+    <span class="header">
+        <div class="card" style="width: 18rem;">
+        <img src="{{data.image}}" class="card-img-top" alt="...">
+        <div class="card-body">
+        <p class="card-text">Details: {{data.details}}</p>
+        <p class="card-text">Price: {{data.price}}</p>
+        <p class="card-text">Purpose: {{data.purpose}}</p>
+        </div>
+        <a class="btn btn-primary" href="#" role="button">Rent Now</a>
+    </div>
+</div>
+    {{/each}}
+
+</body>
+{{!-- <script>
+    let token = 
+    console.log(token)
+    localStorage.setItem("auth-token",token)</script> --}}
+</html>

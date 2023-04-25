@@ -1,0 +1,207 @@
+{{>headers}}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            /* width: 100vw; */
+        }
+
+        #navbar{
+            height: 10vh;
+            width: 100vw;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            /* padding: 0 5vw; */
+            background-color: #355E3B;
+            padding: 2vh 4vw;
+            color: #F7E733;
+        }
+            .links{
+                display: flex;
+                gap: 1vw;
+            }
+        #section1{
+            height: 50vh;
+            width: 100vw;
+
+            
+            /* translate: (-50px,-50px); */
+
+
+            background-size: contain;
+        
+        }
+
+        #section2{
+            display :flex;
+            justify-content: space-around;
+            width:100%;
+            align-items: center;
+
+            /* padding:0 10px; */
+        }
+        
+        img{
+            width: 40%;
+        }
+
+        #tagline{
+            color: white;
+            text-align: center;
+            padding: 30vh 0 0 0;
+            font-size: 56px;
+        }
+
+        h1{
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        button{
+            background-color: #F7E733;
+            color: #355E3B;
+            border: none;
+            height: 4vh;
+            width: 5vw;
+            border-radius: 5px;
+        }
+
+        .buttons:active{
+            height: 2vh;
+        }
+
+        #logo{
+            display: flex;
+            align-items: center;
+            /* justify-content: space-around; */
+            gap: 2vw;
+            /* width: 40%; */
+        }
+        
+
+        a{
+            text-decoration: none;
+        }
+        
+
+        
+        .btns{
+            /* background: #000; */
+            color: #355E3B;
+            font-weight: bold;
+        }
+        #logo>div>a{
+            color: #F7E733;
+        }
+
+        #nav{
+            font-family: 'Raleway', sans-serif;
+            /* float: right; */
+            /* margin: 0 4vw; */
+        }
+        .btns:hover{
+            color: black;
+        }
+
+        .gallery {
+            background: #EEE;
+        }
+
+        .gallery-cell {
+            width: 66%;
+            height: 200px;
+            margin-right: 10px;
+            background: #8C8;
+            counter-increment: gallery-cell;
+        }
+
+        /* cell number */
+        .gallery-cell:before {
+            display: block;
+            text-align: center;
+            content: counter(gallery-cell);
+            line-height: 200px;
+            font-size: 80px;
+            color: white;
+        }
+        .imgFarmer{
+          margin-top: 10px;
+          width: 600px;
+          height: 600px;
+          border-radius: 10px;
+        }
+
+    </style>
+<div id="navbar">
+
+        <span id = "logo">
+            <h1 style="display:inline">Krishi</h1>
+            <div class="links">
+                <a  href=""> Soil Test </a>
+                <a href=""> Rent Farming Equipment </a>
+            </div>
+        </span>
+
+        
+    </div>
+
+    <div id="section1">
+        <section class="vh-100">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-6 text-black">
+
+        <div class="px-5 ms-xl-4">
+          <i class="fas fa-crow fa-2x me-3 pt-5 mt-xl-4" style="color: #709085;"></i>
+        </div>
+
+        <div class="d-flex align-items-center h-custom-2 px-5 ms-xl-4 mt-5 pt-5 pt-xl-0 mt-xl-n5">
+
+          <form style="width: 23rem;" action="/farmers/login" method="POST">
+
+            <h3 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Log in</h3>
+
+            <div class="form-outline mb-4">
+              <input type="email" id="form2Example18" class="form-control form-control-lg" name="email" />
+              <label class="form-label" for="form2Example18">Email address</label>
+            </div>
+
+            <div class="form-outline mb-4">
+              <input type="password" id="form2Example28" class="form-control form-control-lg" name="password"/>
+              <label class="form-label" for="form2Example28">Password</label>
+            </div>
+
+            <div class="pt-1 mb-4">
+              <button class="btn btn-info btn-lg btn-block" type="submit">Login</button>
+            </div>
+
+            <p class="small mb-5 pb-lg-2"><a class="text-muted" href="#!">Forgot password?</a></p>
+            <p>Don't have an account? <a href="/farmers/register" class="link-info">Register here</a></p>
+
+          </form>
+
+        </div>
+
+      </div>
+      <div class="col-sm-6 px-0 d-none d-sm-block">
+        <img class="imgFarmer" src="https://indian-retailer.s3.ap-south-1.amazonaws.com/s3fs-public/2021-07/agritech.jpg"
+      </div>
+    </div>
+  </div>
+</section>
+    </div>
+    
+
+
+<script>
+  
+</script>
